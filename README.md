@@ -1,5 +1,4 @@
-Android Login and Register with SQLite Database Tutorial
-
+The little Pets
 [Tutorial](thelittlepets/)
 
 [Video Demo](thelittlepets/)
