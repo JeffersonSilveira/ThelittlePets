@@ -30,11 +30,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_USER_NAME = "user_name";
     private static final String COLUMN_USER_EMAIL = "user_email";
     private static final String COLUMN_USER_PASSWORD = "user_password";
+    private static final String COLUMN_USER_DESCRIPTION = "user_description";
 
     // cria uma consulta de tabela sql
     private String CREATE_USER_TABLE = "CREATE TABLE " + TABLE_USER + "("
             + COLUMN_USER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + COLUMN_USER_NAME + " TEXT,"
-            + COLUMN_USER_EMAIL + " TEXT," + COLUMN_USER_PASSWORD + " TEXT" + ")";
+            + COLUMN_USER_EMAIL + " TEXT," + COLUMN_USER_PASSWORD + " TEXT" +")";
 
     // soltar a consulta sql da tabela
     private String DROP_USER_TABLE = "DROP TABLE IF EXISTS " + TABLE_USER;
@@ -72,7 +73,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_USER_NAME, user.getName());
         values.put(COLUMN_USER_EMAIL, user.getEmail());
         values.put(COLUMN_USER_PASSWORD, user.getPassword());
-       // Inserindo linha
+       // values.put(COLUMN_USER_DESCRIPTION, user.getDescription());
+
+        // Inserindo linha
        db.insert(TABLE_USER, null, values);
        db.close();
     }
@@ -101,6 +104,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 user.setName(cursor.getString(cursor.getColumnIndex(COLUMN_USER_NAME)));
                 user.setEmail(cursor.getString(cursor.getColumnIndex(COLUMN_USER_EMAIL)));
                 user.setPassword(cursor.getString(cursor.getColumnIndex(COLUMN_USER_PASSWORD)));
+              //  user.setDescription(cursor.getString(cursor.getColumnIndex(COLUMN_USER_DESCRIPTION)));
                 // Adicionando o registro do usuário à lista
                 userList.add(user);
             } while (cursor.moveToNext());
@@ -124,6 +128,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_USER_NAME, user.getName());
         values.put(COLUMN_USER_EMAIL, user.getEmail());
         values.put(COLUMN_USER_PASSWORD, user.getPassword());
+      //  values.put(COLUMN_USER_DESCRIPTION, user.getPassword());
+
 
         // atualizando linha
         db.update(TABLE_USER, values, COLUMN_USER_ID + " = ?",

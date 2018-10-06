@@ -8,6 +8,9 @@ import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.thelittlepets.R;
 import com.thelittlepets.adapters.UsersRecyclerAdapter;
@@ -39,6 +42,23 @@ public class UsersListActivity extends AppCompatActivity {
         initObjects();
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_profile,menu);
+        return  true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id =item.getItemId();
+        if(id== R.id.action_settings){
+            Toast.makeText(this,"item 1",Toast.LENGTH_SHORT).show();
+
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 
 
     private void initViews() {

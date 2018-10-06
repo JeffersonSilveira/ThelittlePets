@@ -33,11 +33,15 @@ public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdap
         return new UserViewHolder(itemView);
     }
 
+
+
     @Override
     public void onBindViewHolder(UserViewHolder holder, int position) {
         holder.textViewName.setText(listUsers.get(position).getName());
         holder.textViewEmail.setText(listUsers.get(position).getEmail());
         holder.textViewPassword.setText(listUsers.get(position).getPassword());
+       // holder.textViewDescription.setText(listUsers.get(position).getDescription());
+
     }
 
     @Override
@@ -55,12 +59,15 @@ public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdap
         public AppCompatTextView textViewName;
         public AppCompatTextView textViewEmail;
         public AppCompatTextView textViewPassword;
+      //  public AppCompatTextView textViewDescription;
 
         public UserViewHolder(View view) {
             super(view);
             textViewName = (AppCompatTextView) view.findViewById(R.id.textViewName);
             textViewEmail = (AppCompatTextView) view.findViewById(R.id.textViewEmail);
             textViewPassword = (AppCompatTextView) view.findViewById(R.id.textViewPassword);
+         //   textViewDescription = (AppCompatTextView) view.findViewById(R.id.textViewDescription);
+
         }
     }
 

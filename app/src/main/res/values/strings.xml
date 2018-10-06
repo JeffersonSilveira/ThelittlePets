@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">TheLittlePets</string>
     <string name="text_accounts">Campanhas</string>
-    <string name="hint_name">Nome/Instituição</string>
+    <string name="hint_name">Nome Institucional</string>
     <string name="hint_email">E-mail</string>
     <string name="hint_password">Senha</string>
+    <string name="hint_description">Descrição</string>
     <string name="hint_confirm_password">Confirmar Senha</string>
     <string name="text_login">Login</string>
     <string name="text_register">Registro</string>
@@ -11,6 +12,7 @@
     <string name="error_message_email">Digite um email válido</string>
     <string name="error_message_age">Digite sua idade</string>
     <string name="error_message_password">Digite sua Senha</string>
+    <string name="error_message_description">Digite uma breve descrição</string>
     <string name="success_message">Registrado com Sucesso</string>
     <string name="text_not_member">Ainda não tem conta? Crie uma</string>
     <string name="text_already_member">Já é um membro? Entrar</string>
@@ -20,4 +22,10 @@
     <string name="action_settings">Configurações</string>
     <string name="text_hello">Sejam Bem vindos,</string>
     <string name="text_title">TheLittlePets</string>
+    <string name="title_activity_menu_lateral">MenuLateralActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
 </resources>
