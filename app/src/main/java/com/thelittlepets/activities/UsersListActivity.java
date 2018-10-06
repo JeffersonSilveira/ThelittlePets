@@ -1,5 +1,6 @@
 package com.thelittlepets.activities;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,8 +9,11 @@ import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.thelittlepets.R;
@@ -52,14 +56,13 @@ public class UsersListActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id =item.getItemId();
         if(id== R.id.action_settings){
-            Toast.makeText(this,"item 1",Toast.LENGTH_SHORT).show();
-
+                    Intent intent = new Intent(this, FragmentActivity.class);
+                    startActivity(intent);
+                    return true;
         }
-
+        //Toast.makeText(this,"item 1",Toast.LENGTH_SHORT).show();
         return super.onOptionsItemSelected(item);
     }
-
-
 
     private void initViews() {
         textViewName = (AppCompatTextView) findViewById(R.id.textViewName);
