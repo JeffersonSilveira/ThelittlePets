@@ -25,6 +25,7 @@
         <activity
             android:name=".activities.FragmentActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".activities.DoacoesActivity"></activity>
     </application>
 
 </manifest>

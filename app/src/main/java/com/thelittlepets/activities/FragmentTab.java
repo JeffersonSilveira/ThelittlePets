@@ -21,7 +21,7 @@ public class FragmentTab extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_layout, container, false);
         TextView tv = (TextView) v.findViewById(R.id.text);
-        tv.setText(this.getTag() + " Content");
+        tv.setText(this.getTag());
         return v;
     }
 }
